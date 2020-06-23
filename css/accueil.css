@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    width: 100%;
+    margin: 0;
+    font-family: cursive;
+}
+header{
+    padding: 10px 10px;
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.log a{
+    color: white;
+} 
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+    background-color: #e8ebef;
+    padding: 20px;
+    line-height: 100px;
+
+}
+.container p{
+    line-height: 30px;
+}.container p a{
+    color: #5107fc;
+    text-decoration: none;
+}
+
+#authe{
+    text-align: center;
+}
+.login{
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+.lab{
+    margin: 0 10px;
+}
+form .put{
+    padding: 5px;
+    margin: 10px 0;
+}
+input[type='submit']{
+    background-color: #440ddc;
+    border: none;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.No{
+    width: 70%;
+    margin: auto;
+} 
