@@ -28,9 +28,9 @@ include('connect.php')
             </ul>
         </header>
         <h1 id="authe">Authenticate</h1>
-        <form action="" method="POST" class="login">
+        <form action="connect.php" method="POST" class="login">
             <label class="lab">Username</label>
-            <input type="text" placeholder="Username" name="User" class="put">
+            <input type="text" placeholder="Username" name="user" class="put">
             <label class="lab">Password</label>
             <input type="password" placeholder="password" name="pass"  class="put">
             <input type="submit" name="login" value="Login">
