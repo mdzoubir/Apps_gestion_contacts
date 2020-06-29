@@ -1,0 +1,85 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: cursive;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.navbar{
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+.navbar ul{
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar ul h3 a{
+color: white;
+}
+.logo a{
+    color: white;
+    text-decoration: none;
+}
+
+.formlog{
+  width: 60%;
+  margin: 0 auto;
+}
+.formlog h1{
+    text-align: center;
+
+}
+.formlog form{
+    margin: 10px auto;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+.formlog form input{
+    margin: 10px 0 15px 0;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+}
+.formlog form input[type="submit"]{
+    background-color: rgb(85, 0, 255);
+    border: none;
+    color: white;
+    font-size: 18px;
+}
+
+.pubpost{
+    font-size: 20px;
+    margin: 10px auto;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+}
+.pubpost input{
+    margin: 10px 0;
+    padding: 10px;
+}
+.pubpost textarea{
+    padding: 10px;
+    padding-bottom: 70px;
+}
+.pubpost input[type='submit']{
+    width: 70px;
+    background-color: blue;
+    color: white;
+    padding: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+}
