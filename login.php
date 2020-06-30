@@ -11,23 +11,13 @@ if(isset($_POST['login'])){
     if(mysqli_num_rows($result)>0){
         $row= mysqli_fetch_assoc($result);
         $_SESSION["name"]=$row["Username"];
-        header("location:dashbord.php");
+        header("location:newpost.php");
         
         }
     else{
-        echo 'no';
+        $message_error = 'your usename or password is incorrect';
     }
 }
-
-
-
-
-
-
-
-
-
-
 
 ?>
 <!DOCTYPE html>
@@ -47,6 +37,7 @@ if(isset($_POST['login'])){
             <input type="text" placeholder="Username" name="user"  require pattern="[a-z]{3,100}"  title="The username should contain only letters ">
             <label>Password</label>
             <input type="password" placeholder="password" name="pass" require>
+            <p class="msgerr"> <?php if(isset($message_error)){ echo $message_error; }?></p>
             <input type="submit" name="login" value="Login">
         </form>
     </div>

@@ -83,3 +83,37 @@ color: white;
     border: none;
     border-radius: 8px;
 }
+
+.viewpost{
+    text-align: center;
+    margin: 0 90px;
+    margin-top: 40px;
+    padding: 5px 10px;
+    width: 20%;
+    color: black;
+    display: inline-block;
+    background-color: rgb(180, 195, 240);
+}
+
+.msgerr{
+    text-align: center;
+    color: rgb(241, 161, 161);
+    background-color: black;
+}
+
+.dashb{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+#cree{
+    grid-column: 2/9;
+}
+.title{
+    color: black;
+    background-color: bisque;
+    padding: 10px;
+    text-align: center;
+}
+.title #pre {
+    color:rgb(77, 35, 116);
+}
