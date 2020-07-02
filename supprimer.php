@@ -1,19 +1,21 @@
 <?php 
-include('conn.php');
+
+// include('conn.php');
+$bdb=new PDO('mysql:host=localhost;dbname=blog-informatif', 'root','root');
 
 // preparation de la requéte
-$podStat = $conn->prepare('DELETE FROM post WHERE id=:num LIMIT 1');
+$podStat = $bdb->prepare('DELETE FROM post WHERE id=:num LIMIT 1');
 
-// liasion du paramaitre nomé
+// liason du paramaitre nomé
 $podStat->bindValue(':num', $_GET['numPost'], PDO::PARAM_INT);
 
 
-$podStat->execute()
-
-
-
-
-
-
-
+$executeIsOk=$podStat->execute();
+if($executeIsOk){
+    echo 'le post a été supprimer';
+    echo $reteur= 'retoure à la page précédent';
+    if(isset($reteur)){
+        header('location:dashbord.php');
+    }
+}
 ?>
