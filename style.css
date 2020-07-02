@@ -117,3 +117,35 @@ color: white;
 .title #pre {
     color:rgb(77, 35, 116);
 }
+.head{
+    cursor: pointer;
+}
+.contact{
+    width: 600px;
+    margin: 0 auto;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+.editpost{
+    margin: 20px 0;
+    grid-column: 3/6;
+    text-align: center;
+    display: none;
+}
+.editpost img{
+    width: 120px;
+    height: 40px;
+}
+
+.deletepost{
+    margin: 20px 0;
+    grid-column: 3/6;
+    text-align: center;
+    display: none;
+}
+.deletepost img{
+    width: 120px;
+    height: 40px;
+}
