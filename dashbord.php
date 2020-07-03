@@ -70,7 +70,7 @@ if(isset($_POST['pubPost'])){
                 <input type="text" placeholder="title..." required name="pubTitle">
                 <label for="">Text</label>
                 <textarea type="text" placeholder="text..." required name="pubText"></textarea>
-                <input type="file" name="pubimg">
+                <input type="file" name="pubimg" accept="image/png, image/jpeg, image/jpg">
                 <input type="submit" name="pubPost" value="Post">
                 <?php if(isset($postbein)){ echo $postbein;}?>
             </form>
@@ -93,7 +93,7 @@ if(isset($_POST['pubPost'])){
                     <td><?php echo htmlspecialchars($data['contenu']);?></td>
                     <td><img src = "avatar/<?php echo $data['img']; ?>" alt=""></td>
                     <td><?php echo ($data['date_pub']);?></td>
-                    <td><a href=""> Edit </a></td>
+                    <td><a href="modifier.php?numPost=<?= $data['id']?>"> Edit </a></td>
                 </tr>
                 <?php
                 }

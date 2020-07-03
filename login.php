@@ -11,7 +11,7 @@ if(isset($_POST['login'])){
     if(mysqli_num_rows($result)>0){
         $row= mysqli_fetch_assoc($result);
         $_SESSION["name"]=$row["Username"];
-        header("location:newpost.php");
+        header("location:dashbord.php");
         
         }
     else{
