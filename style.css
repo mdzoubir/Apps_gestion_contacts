@@ -123,6 +123,8 @@ color: white;
 .contact{
     width: 600px;
     margin: 0 auto;
+    display: none;
+
 }
 table, th, td {
     border: 1px solid black;
@@ -149,3 +151,4 @@ table, th, td {
     width: 120px;
     height: 40px;
 }
+

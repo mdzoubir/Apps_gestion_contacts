@@ -5,17 +5,21 @@ include('conn.php');
 if(isset($_POST['login'])){
     $user =htmlspecialchars(trim($_POST['user'])); //strtolower: tout les caractere en minisquile /htmlspecialchars : pour les tags   /trim: Supprime les espaces (ou d'autres caractères) en début et fin de chaîne
     $pass = $_POST['pass'];
+    $passV = $_POST['passVerify'];
     $requit= "SELECT * FROM admin WHERE username='$user' AND password='$pass' "; //verefication de user and pass
     $result= mysqli_query($conn, $requit); //connection de requite sql ave database
-    if(mysqli_num_rows($result)>0){
-        $row= mysqli_fetch_assoc($result);
-        $_SESSION["name"]=$row["Username"];
-        header("location:dashbord.php");
-        $_SESSION['admin']=$_POST['user'];
-        
+    if($pass == $passV){
+        if(mysqli_num_rows($result)>0){
+            $row= mysqli_fetch_assoc($result);
+            $_SESSION["admin"]=$row["Username"];
+            header("location:dashbord.php");
+            
+            }
+        else{
+            $message_error = 'your usename or password is incorrect';
         }
-    else{
-        $message_error = 'your usename or password is incorrect';
+    }else{
+        $message_error='your password is incorrect';
     }
 }
 
@@ -37,6 +41,8 @@ if(isset($_POST['login'])){
             <input type="text" placeholder="Username" name="user"  require pattern="[a-z]{3,100}"  title="The username should contain only letters ">
             <label>Password</label>
             <input type="password" placeholder="password" name="pass" require>
+            <label>Password Verify</label>
+            <input type="password" placeholder="password verify" name="passVerify" require>
             <p class="msgerr"> <?php if(isset($message_error)){ echo $message_error; }?></p>
             <input type="submit" name="login" value="Login">
         </form>
