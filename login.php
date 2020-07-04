@@ -1,6 +1,5 @@
 <?php 
 
-
 session_start();
 include('conn.php');
 if(isset($_POST['login'])){
@@ -12,6 +11,7 @@ if(isset($_POST['login'])){
         $row= mysqli_fetch_assoc($result);
         $_SESSION["name"]=$row["Username"];
         header("location:dashbord.php");
+        $_SESSION['admin']=$_POST['user'];
         
         }
     else{

@@ -36,6 +36,7 @@ $contact = $podStat->fetch();
             <input type="text" placeholder="title..." required name="pubTitle" value="<?= $contact['titre'];?>">
             <label for="">Text</label>
             <textarea type="text" placeholder="text..." required name="pubText" ><?= $contact['contenu']; ?></textarea>
+            <img src="avatar\<?=$contact['img']; ?>" alt="" style="margin-top:20px;">
             <input type="file" name="pubimg" value="avatar\<?=$contact['img']; ?>">
             <input type="submit" name="pubPost" value="Edit">
         </form>
