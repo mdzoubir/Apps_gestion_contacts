@@ -121,10 +121,48 @@ color: white;
     cursor: pointer;
 }
 .contact{
-    width: 600px;
-    margin: 0 auto;
-    display: none;
+    width: 700px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
 
+}
+.contact form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.contact form .nameCon{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: require(2, 1fr);
+    grid-template-rows: require(2, 1fr);
+}
+.contact form .nameCon .frlabel{
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.contact form .nameCon .seclabel{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.contact form label{
+    margin: 10px;
+}
+.contact form input{
+    padding: 10px;
+}
+.contact form textarea{
+    padding: 10px;
+    height: 100px;
+    margin-bottom: 20px;
+}
+.contact form input[type="submit"]{
+    width: 80px;
+    background-color: rgb(62, 62, 245);
+    color: white;
+    border: none;
+    border-radius: 8px;
 }
 table, th, td {
     border: 1px solid black;
